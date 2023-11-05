@@ -85,18 +85,6 @@ do
 			printTime "${users[${i}]} has been made a standard user."
 		fi
 		
-		echo Make custom password for ${users[${i}]}? yes or no
-		read yn3								
-		if [ $yn3 == yes ]
-		then
-			echo Password:
-			read pw
-			echo -e "$pw\n$pw" | passwd ${users[${i}]}
-			printTime "${users[${i}]} has been given the password '$pw'."
-		else
-			echo -e "@Mongus1776!:))\n@Mongus1776!:))" | passwd ${users[${i}]}
-			printTime "${users[${i}]} has been given the password '@Mongus1776!:))'."
-		fi
 		passwd -x30 -n3 -w7 ${users[${i}]}
 		usermod -L ${users[${i}]}
 		printTime "${users[${i}]}'s password has been given a maximum age of 30 days, minimum of 3 days, and warning of 7 days. ${users[${i}]}'s account has been locked."
