@@ -94,8 +94,8 @@ do
 			echo -e "$pw\n$pw" | passwd ${users[${i}]}
 			printTime "${users[${i}]} has been given the password '$pw'."
 		else
-			echo -e "Moodle!22\nMoodle!22" | passwd ${users[${i}]}
-			printTime "${users[${i}]} has been given the password 'Moodle!22'."
+			echo -e "@Mongus1776!:))\n@Mongus1776!:))" | passwd ${users[${i}]}
+			printTime "${users[${i}]} has been given the password '@Mongus1776!:))'."
 		fi
 		passwd -x30 -n3 -w7 ${users[${i}]}
 		usermod -L ${users[${i}]}
